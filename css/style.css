@@ -94,6 +94,7 @@ header {
     cursor: pointer;
     transition: 0.2s;
     padding: 5px;
+    z-index: 1000;
 }
 
 .hamburger-menu:hover {
@@ -101,7 +102,7 @@ header {
     transform: scale(1.1);
 }
 
-/* Navigation */
+/* Navigation - Desktop */
 .navbar {
     display: block;
 }
@@ -120,6 +121,7 @@ header {
     font-size: 1.1rem;
     transition: 0.2s;
     position: relative;
+    padding: 0.5rem 0;
 }
 
 .nav-link:hover {
@@ -129,7 +131,7 @@ header {
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     left: 0;
     width: 0;
     height: 2px;
@@ -146,45 +148,13 @@ header {
     font-weight: 600;
 }
 
-/* Social Menu Item */
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Social Menu Item - Desktop */
 .social-menu-item {
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255,255,255,0.2);
-}
-
-.social-menu-title {
-    display: block;
-    color: #f3e8ff;
-    font-weight: 600;
-    margin-bottom: 10px;
-    font-size: 1rem;
-}
-
-.social-menu-links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.social-menu-links a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 5px 0;
-    transition: 0.2s;
-}
-
-.social-menu-links a:hover {
-    color: #f3e8ff;
-    transform: translateX(5px);
-}
-
-.social-menu-links i {
-    font-size: 1.2rem;
-    width: 25px;
+    display: none;
 }
 
 /* Tombol WA Floating */
@@ -1013,7 +983,7 @@ footer {
     font-style: italic;
 }
 
-/* Responsive */
+/* ==================== RESPONSIVE DESIGN ==================== */
 @media (max-width: 1024px) {
     .footer-container {
         grid-template-columns: 1fr 1fr;
@@ -1021,12 +991,21 @@ footer {
 }
 
 @media (max-width: 768px) {
-    header { padding: 0.8rem 1rem; }
+    /* Header Mobile */
+    header {
+        padding: 0.8rem 1rem;
+    }
     
+    .header-container {
+        justify-content: space-between;
+    }
+    
+    /* Tampilkan hamburger menu di mobile */
     .hamburger-menu {
         display: block;
     }
     
+    /* Sembunyikan navbar default di mobile */
     .navbar {
         display: none;
         position: absolute;
@@ -1038,42 +1017,93 @@ footer {
         padding: 1rem;
         border-bottom: 1px solid #c084fc;
         box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        z-index: 99;
     }
     
+    /* Tampilkan navbar ketika active */
     .navbar.active {
         display: block;
     }
     
+    /* Menu navigasi mobile - vertical */
     .nav-menu {
         flex-direction: column;
         gap: 0.5rem;
         align-items: stretch;
+        width: 100%;
     }
     
+    /* Style link mobile */
     .nav-link {
         display: block;
-        padding: 0.8rem;
+        padding: 0.8rem 1rem;
         border-radius: 10px;
+        text-align: center;
+        background: rgba(255,255,255,0.1);
     }
     
     .nav-link:hover {
-        background: rgba(255,255,255,0.1);
+        background: rgba(255,255,255,0.2);
     }
     
     .nav-link::after {
         display: none;
     }
     
+    /* Tampilkan social menu item di mobile */
     .social-menu-item {
+        display: block;
         margin-top: 1rem;
-        padding: 0.8rem;
-        background: rgba(0,0,0,0.2);
+        padding: 1rem;
+        background: rgba(0,0,0,0.3);
         border-radius: 10px;
-        border-top: none;
+        border-top: 1px solid rgba(255,255,255,0.2);
     }
     
-    .hero-section h2 { font-size: 2rem; }
-    .menu-grid { grid-template-columns: 1fr; }
+    .social-menu-title {
+        display: block;
+        color: #f3e8ff;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+        text-align: center;
+    }
+    
+    .social-menu-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .social-menu-links a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0.6rem 1rem;
+        background: rgba(255,255,255,0.1);
+        border-radius: 8px;
+        transition: 0.2s;
+    }
+    
+    .social-menu-links a:hover {
+        background: rgba(255,255,255,0.2);
+        transform: translateX(5px);
+    }
+    
+    .social-menu-links i {
+        font-size: 1.2rem;
+        width: 25px;
+    }
+    
+    /* Main content */
+    .hero-section h2 { 
+        font-size: 2rem; 
+    }
+    
+    .menu-grid { 
+        grid-template-columns: 1fr; 
+    }
     
     .lokasi-content {
         grid-template-columns: 1fr;
@@ -1124,6 +1154,10 @@ footer {
         font-size: 1.1rem;
     }
     
+    .hero-section {
+        padding: 1.5rem;
+    }
+    
     .wa-float {
         width: 55px;
         height: 55px;
@@ -1137,10 +1171,24 @@ footer {
         right: 20px;
         width: 45px;
         height: 45px;
+        font-size: 18px;
     }
     
     .promo-banner {
         flex-direction: column;
         gap: 0.5rem;
+    }
+    
+    .promo-item {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .section-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .section-header i {
+        font-size: 1.5rem;
     }
 }

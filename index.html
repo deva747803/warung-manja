@@ -1,0 +1,410 @@
+<!-- warung_manja/index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warung Manja Food • Frozen & Goreng</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CSS terpisah -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER dengan logo & navigasi -->
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <!-- LOGO WARUNG MANJA: assets/images/logo-warung-manja.jpg -->
+                <div class="logo-image" id="logoImg" title="Logo Warung Manja"></div>
+                <div class="warung-title">
+                    <h1>warung manja food</h1>
+                    <p>™ frozen & goreng • homemade</p>
+                </div>
+            </div>
+            
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" id="hamburgerBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Navigasi Menu -->
+            <nav class="navbar" id="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#menu-lengkap" class="nav-link">Menu Lengkap</a></li>
+                    <li><a href="#frozen" class="nav-link">Frozen Food</a></li>
+                    <li><a href="#rekomendasi" class="nav-link">Rekomendasi</a></li>
+                    <li><a href="#tentang-kami" class="nav-link">Tentang Kami</a></li>
+                    <li><a href="#lokasi" class="nav-link">Alamat</a></li>
+                    <li class="social-menu-item">
+                        <span class="social-menu-title">Sosial Media Kami</span>
+                        <div class="social-menu-links">
+                            <a href="https://instagram.com/warungmanja_food" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                            <a href="https://www.facebook.com/share/1BGboQXaqT/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                            <a href="https://wa.me/6285210248571" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Tombol WA Floating dengan template chat -->
+    <a href="https://wa.me/6285210248571?text=Selamat%20datang%20di%20Warung%20Manja%20Food%20%E2%9D%A4%0A%0AAda%20yang%20bisa%20kami%20bantu%3F%20Silakan%20tulis%20pesanan%20Anda%20dengan%20format%3A%0A%0A%F0%9F%8D%94%20Menu%20%3A%0A%F0%9F%93%A6%20Jumlah%20%3A%0A%F0%9F%8D%B3%20Jenis%20%3A%20(Frozen%20/%20Goreng)%0A%F0%9F%93%8D%20Alamat%20%3A%0A%F0%9F%93%9E%20No.%20HP%20%3A%0A%0AKami%20akan%20segera%20membalas%20pesan%20Anda." class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="wa-tooltip">Chat via WA</span>
+    </a>
+
+    <!-- Tombol Scroll ke Atas -->
+    <button id="scrollToTop" class="scroll-top" title="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <main>
+        <div class="hero-section">
+            <h2>🍽️ menu andalan kami</h2>
+            <div class="tagline">"Manisnya Persahabatan, Gurihnya Kebersamaan"</div>
+            <div class="frozen-badge">
+                <i class="fas fa-snowflake"></i>
+                <span>Tersedia dalam bentuk FROZEN & GORENG</span>
+                <i class="fas fa-snowflake"></i>
+            </div>
+            <!-- Informasi Minimal Order & Free Ongkir -->
+            <div class="promo-banner">
+                <div class="promo-item">
+                    <i class="fas fa-box"></i>
+                    <span>Minimal pesan 3 pack</span>
+                </div>
+                <div class="promo-item">
+                    <i class="fas fa-truck"></i>
+                    <span>Free ongkir Jabodetabek*</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Lengkap Section -->
+        <section id="menu-lengkap">
+            <div class="section-header">
+                <i class="fas fa-utensils"></i>
+                <h3>menu lengkap</h3>
+            </div>
+            
+            <!-- GRID PRODUK -->
+            <div class="menu-grid" id="menu-grid">
+                <!-- card risol -->
+                <div class="card">
+                    <div class="card-img" style="background-image: url('assets/images/risol.jpeg');">
+                        <span class="price-tag">IDR 3K / 25K (frozen)</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Risol Mayo</h3>
+                        <div class="desc">kulit lembut, isi daging + saus dan mayo • premium</div>
+                        <!-- NUTRISI - hanya halal -->
+                        <div class="nutrisi-info">
+                            <span><i class="fas fa-check-circle"></i> Halal</span>
+                        </div>
+                        <a class="btn-wa" href="https://wa.me/6285210248571?text=Halo%20Warung%20Manja%2C%20saya%20mau%20order%20Risol%20Mayo%0A%0A%F0%9F%93%A6%20Jumlah%20%3A%0A%F0%9F%8D%B3%20Jenis%20%3A%20(Frozen%20/%20Goreng)%0A%F0%9F%93%8D%20Alamat%20%3A%0A%F0%9F%93%9E%20No.%20HP%20%3A%0A%0ATerima%20kasih%20Warung%20Manja%20%E2%9D%A4" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Order via WA
+                        </a>
+                    </div>
+                </div>
+                <!-- card piscok -->
+                <div class="card">
+                    <div class="card-img" style="background-image: url('assets/images/piscok.jpeg');">
+                        <span class="price-tag">IDR 2.5K / 20K (frozen)</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Pisang Coklat</h3>
+                        <div class="desc">Pisang raja premium, coklat leleh, kulit renyah</div>
+                        <div class="nutrisi-info">
+                            <span><i class="fas fa-check-circle"></i> Halal</span>
+                        </div>
+                        <a class="btn-wa" href="https://wa.me/6285210248571?text=Halo%20Warung%20Manja%2C%20saya%20mau%20order%20Piscok%0A%0A%F0%9F%93%A6%20Jumlah%20%3A%0A%F0%9F%8D%B3%20Jenis%20%3A%20(Frozen%20/%20Goreng)%0A%F0%9F%93%8D%20Alamat%20%3A%0A%F0%9F%93%9E%20No.%20HP%20%3A%0A%0ATerima%20kasih%20Warung%20Manja%20%E2%9D%A4" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Order via WA
+                        </a>
+                    </div>
+                </div>
+                <!-- card sosis goreng -->
+                <div class="card">
+                    <div class="card-img" style="background-image: url('assets/images/sosis-goreng.jpeg');">
+                        <span class="price-tag">IDR 4K / 35K (frozen)</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Sosis Goreng</h3>
+                        <div class="desc">Sosis ayam premium crispy, saus spesial</div>
+                        <div class="nutrisi-info">
+                            <span><i class="fas fa-check-circle"></i> Halal</span>
+                        </div>
+                        <a class="btn-wa" href="https://wa.me/6285210248571?text=Halo%20Warung%20Manja%2C%20saya%20mau%20order%20Sosis%20Goreng%0A%0A%F0%9F%93%A6%20Jumlah%20%3A%0A%F0%9F%8D%B3%20Jenis%20%3A%20(Frozen%20/%20Goreng)%0A%F0%9F%93%8D%20Alamat%20%3A%0A%F0%9F%93%9E%20No.%20HP%20%3A%0A%0ATerima%20kasih%20Warung%20Manja%20%E2%9D%A4" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Order via WA
+                        </a>
+                    </div>
+                </div>
+                <!-- card ager jelly -->
+                <div class="card">
+                    <div class="card-img" style="background-image: url('assets/images/ager-jelly.jpeg');">
+                        <span class="price-tag">IDR 5K / 45K (frozen)</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Ager Jelly</h3>
+                        <div class="desc">Jelly segar 3 rasa, untuk rasa bisa di sesuaikan/request</div>
+                        <div class="nutrisi-info">
+                            <span><i class="fas fa-check-circle"></i> Halal</span>
+                        </div>
+                        <a class="btn-wa" href="https://wa.me/6285210248571?text=Halo%20Warung%20Manja%2C%20saya%20mau%20order%20Ager%20Jelly%0A%0A%F0%9F%93%A6%20Jumlah%20%3A%0A%F0%9F%8D%B3%20Jenis%20%3A%20(Frozen%20/%20Goreng)%0A%F0%9F%93%8D%20Alamat%20%3A%0A%F0%9F%93%9E%20No.%20HP%20%3A%0A%0ATerima%20kasih%20Warung%20Manja%20%E2%9D%A4" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Order via WA
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REKOMENDASI SECTION - semua menu -->
+        <section id="rekomendasi" class="rekomendasi-section">
+            <div class="section-header">
+                <i class="fas fa-star"></i>
+                <h3>rekomendasi chef</h3>
+            </div>
+            <div class="rekomendasi-content">
+                <div class="rekomendasi-card">
+                    <div class="rekomendasi-badge">🔥 BEST SELLER</div>
+                    <div class="rekomendasi-img" style="background-image: url('assets/images/risol.jpeg');"></div>
+                    <h4>Risol Mayo</h4>
+                    <p>Kulit lembut, isi daging + saus dan mayo • premium</p>
+                    <div class="rekomendasi-footer">
+                        <span class="rekomendasi-harga">25K (frozen)</span>
+                        <a href="https://wa.me/6285210248571?text=Saya%20tertarik%20dengan%20Risol%20Mayo%20(rekomendasi%20chef)" class="rekomendasi-wa">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="rekomendasi-card">
+                    <div class="rekomendasi-badge">🍌 FAVORIT</div>
+                    <div class="rekomendasi-img" style="background-image: url('assets/images/piscok.jpeg');"></div>
+                    <h4>Pisang Coklat</h4>
+                    <p>Pisang raja premium, coklat leleh, kulit renyah</p>
+                    <div class="rekomendasi-footer">
+                        <span class="rekomendasi-harga">20K (frozen)</span>
+                        <a href="https://wa.me/6285210248571?text=Saya%20tertarik%20dengan%20Pisang%20Coklat%20(rekomendasi%20chef)" class="rekomendasi-wa">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="rekomendasi-card">
+                    <div class="rekomendasi-badge">🌭 CHEF'S CHOICE</div>
+                    <div class="rekomendasi-img" style="background-image: url('assets/images/sosis-goreng.jpeg');"></div>
+                    <h4>Sosis Goreng</h4>
+                    <p>Sosis ayam premium crispy, saus spesial</p>
+                    <div class="rekomendasi-footer">
+                        <span class="rekomendasi-harga">35K (frozen)</span>
+                        <a href="https://wa.me/6285210248571?text=Saya%20tertarik%20dengan%20Sosis%20Goreng%20(rekomendasi%20chef)" class="rekomendasi-wa">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="rekomendasi-card">
+                    <div class="rekomendasi-badge">🍮 FAVORIT</div>
+                    <div class="rekomendasi-img" style="background-image: url('assets/images/ager-jelly.jpeg');"></div>
+                    <h4>Ager Jelly</h4>
+                    <p>Jelly segar 3 rasa, untuk rasa bisa di sesuaikan/request</p>
+                    <div class="rekomendasi-footer">
+                        <span class="rekomendasi-harga">45K (frozen)</span>
+                        <a href="https://wa.me/6285210248571?text=Saya%20tertarik%20dengan%20Ager%20Jelly%20(rekomendasi%20chef)" class="rekomendasi-wa">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frozen Food Section -->
+        <section id="frozen" class="frozen-section">
+            <div class="section-header">
+                <i class="fas fa-snowflake"></i>
+                <h3>frozen food</h3>
+            </div>
+            <div class="frozen-content">
+                <div class="frozen-card">
+                    <i class="fas fa-box-open"></i>
+                    <h4>Paket Frozen Risol</h4>
+                    <p>10 pcs - IDR 25K</p>
+                </div>
+                <div class="frozen-card">
+                    <i class="fas fa-box-open"></i>
+                    <h4>Paket Frozen Piscok</h4>
+                    <p>10 pcs - IDR 20K</p>
+                </div>
+                <div class="frozen-card">
+                    <i class="fas fa-box-open"></i>
+                    <h4>Paket Frozen Sosis</h4>
+                    <p>10 pcs - IDR 35K</p>
+                </div>
+                <div class="frozen-card">
+                    <i class="fas fa-box-open"></i>
+                    <h4>Paket Frozen Ager</h4>
+                    <p>10 cup - IDR 45K</p>
+                </div>
+                <div class="frozen-card">
+                    <i class="fas fa-gift"></i>
+                    <h4>Paket Campur</h4>
+                    <p>5 risol + 5 piscok - IDR 40K</p>
+                </div>
+                <div class="frozen-card">
+                    <i class="fas fa-gift"></i>
+                    <h4>Paket Lengkap</h4>
+                    <p>Semua varian - IDR 120K</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tentang Kami Section dengan Image Toko -->
+        <section id="tentang-kami" class="tentang-section">
+            <div class="section-header">
+                <i class="fas fa-heart"></i>
+                <h3>tentang warung manja</h3>
+            </div>
+            <div class="tentang-content">
+                <div class="tentang-text">
+                    <p>Warung Manja Food hadir untuk menemani hari-harimu dengan jajanan pasar kekinian yang dibuat dengan cinta dan bahan-bahan berkualitas. Kami percaya bahwa setiap gigitan bisa menghadirkan kebahagiaan.</p>
+                    <p>✨ <strong>Nikmati dalam 2 pilihan:</strong> Langsung goreng (siap santap) atau Frozen (stok rumah, goreng sendiri).</p>
+                    <p><i class="fas fa-box"></i> <strong>Minimal pesan 3 pack</strong> untuk pengiriman</p>
+                    <p><i class="fas fa-truck"></i> <strong>Free ongkir area Jabodetabek*</strong> (syarat & ketentuan berlaku)</p>
+                    <p>Berdiri sejak 2023, Warung Manja telah menjadi teman ngemil favorit di Jakarta.</p>
+                    
+                    <!-- Metode Pembayaran -->
+                    <div class="payment-methods">
+                        <h4><i class="fas fa-credit-card"></i> Metode Pembayaran</h4>
+                        <div class="payment-icons">
+                            <span><i class="fas fa-money-bill-wave"></i> Tunai</span>
+                            <span><i class="fas fa-university"></i> Transfer Bank (BCA, Mandiri, BRI)</span>
+                            <span><i class="fas fa-mobile-alt"></i> DANA, OVO, GoPay</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Kerjasama & Reseller -->
+                    <div class="kerjasama-info">
+                        <h4><i class="fas fa-handshake"></i> Kerjasama & Reseller</h4>
+                        <p>Tertarik menjadi reseller atau kerjasama? Hubungi kami via WhatsApp:</p>
+                        <a href="https://wa.me/6285210248571?text=Halo%20Warung%20Manja%2C%20saya%20tertarik%20untuk%20kerjasama%20%2F%20menjadi%20reseller" class="btn-wa-small">
+                            <i class="fab fa-whatsapp"></i> 0852-1024-8571
+                        </a>
+                    </div>
+                    
+                    <div class="slogan-utama">
+                        <i class="fas fa-quote-left"></i>
+                        <span>Manisnya Persahabatan, Gurihnya Kebersamaan</span>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                </div>
+                <div class="tentang-image">
+                    <!-- Image Toko -->
+                    <div class="img-placeholder" style="background-image: url('assets/images/toko-warung-manja.jpeg');"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOKASI WARUNG dengan alamat baru dan embed maps -->
+        <section id="lokasi" class="lokasi-section">
+            <div class="section-header">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>temukan warung manja</h3>
+            </div>
+            <div class="lokasi-content">
+                <div class="alamat-card">
+                    <i class="fas fa-store"></i>
+                    <div class="alamat-detail">
+                        <h4>Warung Manja Food</h4>
+                        <p>Rusun Griya Tipar Cakung Blok Kruing</p>
+                        <p>Lt. Dasar, No.16 Blok Kruing. Gd. Paling, belakang</p>
+                        <p>RT.010/RW.010, Cakung Bar., Kec. Cakung</p>
+                        <p>Kota Jakarta Timur, DKI Jakarta 13910</p>
+                        <div class="jam-operasional">
+                            <i class="far fa-clock"></i>
+                            <span>Buka Setiap Hari • 06.00 - 21.00 WIB</span>
+                        </div>
+                        <div class="maps-link">
+                            <a href="https://maps.app.goo.gl/EWGHifL7CCU1XS3e7?g_st=ic" target="_blank" class="btn-maps">
+                                <i class="fas fa-directions"></i> Buka di Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3172607446634!2d106.946712!3d-6.176325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698b8b2b2b2b2b%3A0x2b2b2b2b2b2b2b2b!2sRusun%20Griya%20Tipar%20Cakung!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">warung manja <span>food</span></div>
+                <p class="footer-desc">Frozen & goreng homemade dengan cita rasa tinggi. Sajikan kebahagiaan dalam setiap gigitan.</p>
+                <div class="footer-contact">
+                    <p><i class="fas fa-map-marker-alt"></i> Rusun Griya Tipar Cakung, Jakarta Timur</p>
+                    <p><i class="fas fa-phone-alt"></i> 0852-1024-8571</p>
+                    <p><i class="fas fa-envelope"></i> manjafood@email.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Informasi</h4>
+                <ul class="footer-links">
+                    <li><a href="#tentang-kami">Tentang Warung Manja</a></li>
+                    <li><a href="#lokasi">Lokasi & Jam Operasional</a></li>
+                    <li><a href="#">Metode Pembayaran</a></li>
+                    <li><a href="#">Kebijakan Pengiriman</a></li>
+                    <li><a href="#">Syarat Free Ongkir</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Layanan</h4>
+                <ul class="footer-links">
+                    <li><a href="#menu-lengkap">Menu Catering</a></li>
+                    <li><a href="#frozen">Frozen Food</a></li>
+                    <li><a href="https://wa.me/6285210248571?text=Halo%20Warung%20Manja%2C%20saya%20ingin%20pemesanan%20khusus">Pemesanan Khusus</a></li>
+                    <li><a href="https://wa.me/6285210248571?text=Halo%20Warung%20Manja%2C%20saya%20tertarik%20menjadi%20reseller">Reseller / Dropship</a></li>
+                    <li><a href="https://wa.me/6285210248571?text=Halo%20Warung%20Manja%2C%20saya%20tertarik%20kerjasama">Kerjasama</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Sosial Media</h4>
+                <div class="footer-social">
+                    <a href="https://instagram.com/warungmanja_food" target="_blank" class="social-item">
+                        <i class="fab fa-instagram"></i>
+                        <span>@warungmanja_food</span>
+                    </a>
+                    <a href="https://www.facebook.com/share/1BGboQXaqT/?mibextid=wwXIfr" target="_blank" class="social-item">
+                        <i class="fab fa-facebook"></i>
+                        <span>warungmanja.food</span>
+                    </a>
+                    <a href="https://wa.me/6285210248571" target="_blank" class="social-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>0852-1024-8571</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="copyright">
+                <i class="far fa-copyright"></i> 2025 Warung Manja Food. All rights reserved.
+            </div>
+            <div class="footer-credit">
+                <span>Manisnya Persahabatan, Gurihnya Kebersamaan</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript terpisah -->
+    <script src="js/script.js"></script>
+</body>
+</html>

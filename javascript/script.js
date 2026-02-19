@@ -6,40 +6,61 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const navbar = document.getElementById('navbar');
     
+    console.log('Hamburger:', hamburgerBtn); // Untuk debugging
+    console.log('Navbar:', navbar); // Untuk debugging
+    
     if (hamburgerBtn && navbar) {
         hamburgerBtn.addEventListener('click', function(e) {
+            e.preventDefault();
             e.stopPropagation();
+            
+            // Toggle class active pada navbar
             navbar.classList.toggle('active');
+            
+            // Ubah icon hamburger
             const icon = hamburgerBtn.querySelector('i');
             if (navbar.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
+                console.log('Menu dibuka'); // Untuk debugging
             } else {
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
+                console.log('Menu ditutup'); // Untuk debugging
             }
+        });
+
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-link, .social-menu-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (navbar.classList.contains('active')) {
+                    navbar.classList.remove('active');
+                    const icon = hamburgerBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
             if (!navbar.contains(event.target) && !hamburgerBtn.contains(event.target)) {
-                navbar.classList.remove('active');
-                const icon = hamburgerBtn.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                if (navbar.classList.contains('active')) {
+                    navbar.classList.remove('active');
+                    const icon = hamburgerBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
             }
         });
 
-        // Close menu when link clicked
-        const navLinks = document.querySelectorAll('.nav-link, .social-menu-links a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navbar.classList.remove('active');
-                const icon = hamburgerBtn.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            });
+        // Prevent click on hamburger from closing menu
+        hamburgerBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
         });
+    } else {
+        console.error('Hamburger button atau navbar tidak ditemukan!');
     }
 
     // ========== SMOOTH SCROLL ==========
@@ -62,20 +83,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========== SCROLL TO TOP BUTTON ==========
     const scrollBtn = document.getElementById('scrollToTop');
     
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            scrollBtn.classList.add('show');
-        } else {
-            scrollBtn.classList.remove('show');
-        }
-    });
-
-    scrollBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if (scrollBtn) {
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
         });
-    });
+
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 
     // ========== FALLBACK GAMBAR MENU ==========
     const menuCards = document.querySelectorAll('.card');
@@ -163,20 +186,25 @@ document.addEventListener('DOMContentLoaded', function() {
         let scrollY = window.pageYOffset;
         
         sections.forEach(section => {
-            const sectionHeight = section.offsetHeight;
-            const sectionTop = section.offsetTop - 100;
-            const sectionId = section.getAttribute('id');
-            
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                navLinks2.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('active');
-                    }
-                });
+            if (section) {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 100;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    navLinks2.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
             }
         });
     }
     
     window.addEventListener('scroll', highlightNavigation);
+    
+    // Jalankan sekali saat halaman dimuat
+    setTimeout(highlightNavigation, 100);
 });
